@@ -29,3 +29,9 @@ dev = [
     "pytest>=9.2.0",
     "ruff>=0.17.3",
 ]
+[tool.mypy]
+python_version = "3.12"
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*"]
+ignore_missing_imports = true

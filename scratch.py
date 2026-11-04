@@ -17,7 +17,11 @@ except ValidationError as e:
 from readmission_risk.summary import mean_age
 
 patients = [
-    PatientRecord(age=64, sex="F", systolic_bp=138, hba1c=7.2, prior_admissions=2, smoker=False),
-    PatientRecord(age=52, sex="M", systolic_bp=150, hba1c=8.1, prior_admissions=0, smoker=True),
+    PatientRecord(
+        age=64, sex="F", systolic_bp=138, hba1c=7.2, prior_admissions=2, smoker=False
+    ),
+    PatientRecord(
+        age=52, sex="M", systolic_bp=150, hba1c=8.1, prior_admissions=0, smoker=True
+    ),
 ]
-print(mean_age(patients))   # باید 58.0 باشد    
+print(mean_age(patients))  # باید 58.0 باشد
